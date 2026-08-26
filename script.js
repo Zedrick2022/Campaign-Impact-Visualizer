@@ -1,26 +1,16 @@
-const form = document.getElementById("checklistForm");
-const submitBtn = document.getElementById("submitBtn");
-const formStatus = document.getElementById("formStatus");
-
-form.addEventListener("submit", (event) => {
-  const email = document.getElementById("email").value.trim();
-  const name = document.getElementById("name").value.trim();
-
-  if (!name || !email) {
+const form=document.getElementById('agencyForm');
+const button=document.getElementById('submitButton');
+const statusText=document.getElementById('formStatus');
+document.getElementById('year').textContent=new Date().getFullYear();
+form.addEventListener('submit',(event)=>{
+  if(!form.checkValidity()){
     event.preventDefault();
-    formStatus.textContent = "Please enter your name and a valid email address.";
-    formStatus.style.color = "#b42318";
+    form.reportValidity();
     return;
   }
-
-  submitBtn.disabled = true;
-  submitBtn.classList.add("is-loading");
-  formStatus.textContent = "Sending your request…";
-  formStatus.style.color = "#0878d7";
-
-  // Do not convert this submission to AJAX:
-  // FormSubmit's autoresponse feature requires a normal form submission
-  // with reCAPTCHA enabled.
+  button.disabled=true;
+  button.classList.add('loading');
+  statusText.textContent='Sending your request…';
+  statusText.style.color='#0d7fd9';
 });
-
 
