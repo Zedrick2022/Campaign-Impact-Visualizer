@@ -82,23 +82,106 @@
           <div class="form-heading"><span>TELL ME ABOUT YOUR AGENCY</span><h3>Get your free checklist</h3><p>Your answers help reveal the reporting challenges agencies face most often.</p></div>
           <input type="hidden" name="_subject" value="New Creative Agency Checklist Lead">
           <input type="hidden" name="_template" value="table">
-          <input
-  type="hidden"
-  name="_autoresponse"
-  value="Hi,
+          
+<section class="lead-magnet">
 
-Thank you for requesting my Campaign Performance Reporting Checklist for Creative & Digital Marketing Agencies.
+    <form id="checklistForm">
 
-This checklist is designed to help you identify the campaign metrics that matter, organize your performance data, and communicate results more clearly to your clients.
+        <h2>Get Your Free Campaign Reporting Checklist</h2>
 
-Use it to review how your agency measures engagement, visibility, leads, conversions, customer growth, and overall campaign impact.
+        <div class="form-group">
+            <label for="name">Your Name</label>
 
-Download your checklist here:
-https://www.image2url.com/r2/default/documents/1787782250247-e138248e-4b05-44b9-aac0-6ef9f6adec81.pdf
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+        </div>
 
-Kind regards,
-Zedrick Salupito"
-/>
+        <div class="form-group">
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email address"
+                required
+            >
+        </div>
+
+        <!-- Email subject you will receive -->
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Campaign Checklist Request"
+        >
+
+        <!-- Helps reduce spam -->
+        <input type="text" name="_honey" style="display:none">
+
+        <button type="submit" id="submitButton">
+            Get My Checklist
+        </button>
+
+        <p id="formStatus"></p>
+
+    </form>
+
+
+    <!-- SUCCESS MESSAGE -->
+
+    <div id="successMessage" class="success-message">
+
+        <h2>Your Checklist Is Ready!</h2>
+
+        <p>Hi,</p>
+
+        <p>
+            Thank you for requesting my
+            <strong>
+                Campaign Performance Reporting Checklist for
+                Creative & Digital Marketing Agencies.
+            </strong>
+        </p>
+
+        <p>
+            This checklist is designed to help you identify the
+            campaign metrics that matter, organize your performance
+            data, and communicate results more clearly to your clients.
+        </p>
+
+        <p>
+            Use it to review how your agency measures engagement,
+            visibility, leads, conversions, customer growth, and
+            overall campaign impact.
+        </p>
+
+        <div class="download-area">
+
+            <a
+                href="https://www.image2url.com/r2/default/documents/1787782250247-e138248e-4b05-44b9-aac0-6ef9f6adec81.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="download-link"
+            >
+                Download your checklist here
+            </a>
+
+        </div>
+
+        <p class="signature">
+            Kind regards,<br>
+            <strong>Zedrick Salupito</strong>
+        </p>
+
+    </div>
+
+</section>
+
           <input type="text" name="_honey" class="hidden-field" tabindex="-1" autocomplete="off">
 
           <div class="field-row">
